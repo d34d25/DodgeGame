@@ -66,9 +66,18 @@ int main(void)
 
                 currentSpawnPoint.Shoot_Bullet(3.0f, 3.0f, 60);
                // std::cout << "bullet shot";
+                for (auto& bullet : currentSpawnPoint.Get_BulletVector())
+                {
+                    myPlayer.Check_EnemyCollisions(bullet.Get_BulletObject());
+                }
             }
         }
 
+        if (myPlayer.Get_HP() <= 0)
+        {
+            CloseWindow();
+            return 0;
+        }
 
         // Draw
         //----------------------------------------------------------------------------------

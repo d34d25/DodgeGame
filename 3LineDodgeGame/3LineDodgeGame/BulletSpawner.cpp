@@ -3,7 +3,7 @@
 #include "BulletSpawner.h"
 
 BulletSpawner::BulletSpawner(float x, float y, float lineSpacing, Rectangle area)
-	: spawner_object(x, y, 1.0f, 0.0f, 0.0f, YELLOW)
+	: spawner_object(x, y, 1.0f, 0.0f, 0.0f, YELLOW), bullet_atm(0, 0, 0, 0, 0, WHITE)
 {
 	bullet_XVel = 0.0f;
 	bullet_YVel = 0.0f;
@@ -27,7 +27,7 @@ void BulletSpawner::Shoot_Bullet(float xVel, float yVel, int delay) //paraemeter
 				shootTimer = 0;
 
 				int random_bulletType = rand() % 3;
-				std::cout << random_bulletType;
+				//std::cout << random_bulletType;
 
 				switch (random_bulletType)
 				{
@@ -110,14 +110,8 @@ void BulletSpawner::Draw_Bullets()
 	}
 }
 
-void BulletSpawner::Delay(int seconds)
-{
-	
 
-	
-}
 
-GameObject& BulletSpawner::Get_SpawnerObject()
-{
-	return spawner_object;
+std::vector<Bullet>& BulletSpawner::Get_BulletVector() {
+	return bullet_vector;
 }

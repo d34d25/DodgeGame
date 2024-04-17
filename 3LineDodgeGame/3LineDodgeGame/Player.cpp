@@ -12,6 +12,7 @@ Player::Player(float x, float y, float radius, float xVelocity, Color color, flo
     max_speed = 7.0f; 
     line_spacing = lineSpace;
     play_area = playableArea;
+    hp = 100;
 }
 
 
@@ -24,13 +25,13 @@ void Player::Move_Player()
     {
         is_moving = true;
         desiredMove = 5.0f; 
-        std::cout << "Right Key Pressed\n";
+        //std::cout << "Right Key Pressed\n";
     }
     else if (IsKeyDown(KEY_LEFT))
     {
         is_moving = true;
         desiredMove = -5.0f; // Negative for left movement
-        std::cout << "Left Key Pressed\n";
+        //std::cout << "Left Key Pressed\n";
     }
 
     if (is_moving)
@@ -82,4 +83,18 @@ void Player::Check_PlayerCollisions()
 
 GameObject& Player::Get_PlayerObject() {
     return player_object;
+}
+
+void Player::Check_EnemyCollisions(GameObject bullet_object)
+{
+    if (CheckCollisionCircles({ player_object.Get_X(), player_object.Get_Y() }, player_object.Get_R(), { bullet_object.Get_X(), bullet_object.Get_Y() }, bullet_object.Get_R()))
+    {
+        hp--;
+        std::cout << hp << std::endl;
+    }
+}
+
+int Player::Get_HP()
+{
+    return hp;
 }

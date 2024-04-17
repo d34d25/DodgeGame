@@ -22,6 +22,8 @@ private:
 
 	int i;
 
+	GameObject bullet_atm;
+
 public:
 
 	BulletSpawner(float x, float y, float lineSpacing, Rectangle area);
@@ -32,8 +34,9 @@ public:
 
 	void Draw_Bullets();
 
-	void Delay(int seconds);
-
 	GameObject& Get_SpawnerObject();
+
+    std::vector<Bullet>& Get_BulletVector();
+
 };
 

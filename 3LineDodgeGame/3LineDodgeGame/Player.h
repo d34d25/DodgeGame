@@ -17,6 +17,8 @@ private:
 
 	void Check_PlayerCollisions();
 
+	int hp;
+
 public:
 
 	Player(float x, float y, float radius, float xVelocity, Color color, float lineSpace, Rectangle area);
@@ -24,6 +26,10 @@ public:
 	void Move_Player();
 
 	GameObject& Get_PlayerObject();
+
+	void Check_EnemyCollisions(GameObject bullet_object);
+
+	int Get_HP();
 
 };
 
