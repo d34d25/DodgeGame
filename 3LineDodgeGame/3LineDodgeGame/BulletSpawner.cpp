@@ -78,7 +78,7 @@ void BulletSpawner::Shoot_Bullet(float xVel, float yVel, int delay) //paraemeter
 				currentBullet.Get_BulletObject().Set_YVel(currentBullet.Get_BulletObject().Get_YVel() * -1);  //bounce
 			}
 
-			if (currentBullet.Get_BulletObject().Get_X() < play_area.x || currentBullet.Get_BulletObject().Get_X() > play_area.width + 100) // check if the bullets are outside the area on X
+			if (currentBullet.Get_BulletObject().Get_X() < play_area.x || currentBullet.Get_BulletObject().Get_X() > play_area.width + GetScreenWidth() * 0.12) // check if the bullets are outside the area on X
 			{
 				auto bulletToDelete = bullet_vector.begin() + idx;
 				bullet_vector.erase(bulletToDelete);

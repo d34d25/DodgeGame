@@ -11,10 +11,10 @@ int main(void)
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    static const int screenWidth = 800;
+    static const int screenWidth = 1200;
     static const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    InitWindow(screenWidth, screenHeight, "");
 
     float playable_area_width = screenWidth * 0.75;
     float playable_area_height = screenHeight * 0.75;

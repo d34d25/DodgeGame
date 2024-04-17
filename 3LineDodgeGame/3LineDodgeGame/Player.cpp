@@ -13,6 +13,7 @@ Player::Player(float x, float y, float radius, float xVelocity, Color color, flo
     line_spacing = lineSpace;
     play_area = playableArea;
     hp = 100;
+    std::cout << hp << std::endl;
 }
 
 
@@ -73,10 +74,10 @@ void Player::Check_PlayerCollisions()
         player_object.Set_XVel(0.0f);
         player_object.Set_X(play_area.x + player_object.Get_R());
     }
-    else if (player_object.Get_X() + player_object.Get_R() > play_area.width + 100) {
+    else if (player_object.Get_X() + player_object.Get_R() > play_area.width + GetScreenWidth() * 0.12) {
         // Player has collided with the right edge
         player_object.Set_XVel(0.0f);
-        player_object.Set_X(play_area.width - player_object.Get_R() + 100); // Snap to right edge
+        player_object.Set_X(play_area.width - player_object.Get_R() + GetScreenWidth() * 0.12); // Snap to right edge
     }
 }
 
