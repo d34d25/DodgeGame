@@ -9,12 +9,12 @@ BulletSpawner::BulletSpawner(float x, float y, float lineSpacing, Rectangle area
 	bullet_YVel = 0.0f;
 
 	line_spacing = lineSpacing;
-	play_area = area;
+	play_area = area; 
 	max_bullets = 5;
 	i = 0;
 }
 
-void BulletSpawner::Shoot_Bullet(float xVel, float yVel, int delay) //paraemeters are present so I be able to shoot bullets to the right or left
+void BulletSpawner::Shoot_Bullet(float xVel, float yVel, int delay) //paraemeters are present so I can be able to shoot bullets to the right or left
 {
 	static int shootTimer = 0;
 
@@ -109,7 +109,6 @@ void BulletSpawner::Draw_Bullets()
 		currentBullet.Draw_Bullet();
 	}
 }
-
 
 
 std::vector<Bullet>& BulletSpawner::Get_BulletVector() {

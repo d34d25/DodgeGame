@@ -34,8 +34,6 @@ public:
 
 	void Draw_Bullets();
 
-	GameObject& Get_SpawnerObject();
-
     std::vector<Bullet>& Get_BulletVector();
 
 };

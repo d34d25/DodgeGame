@@ -75,6 +75,7 @@ int main(void)
 
         if (myPlayer.Get_HP() <= 0)
         {
+            std::cout << "You died, so did the program" << std::endl;
             CloseWindow();
             return 0;
         }
@@ -105,6 +106,7 @@ int main(void)
             }
         }
 
+        DrawFPS(10, 10);
 
         EndDrawing();
         //----------------------------------------------------------------------------------

@@ -1,5 +1,8 @@
-﻿  Player.cpp
-E:\C++ projects\DodgeGame\3LineDodgeGame\3LineDodgeGame\Player.cpp(80,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+﻿  3LineDodgeGame.cpp
+E:\C++ projects\DodgeGame\3LineDodgeGame\3LineDodgeGame\3LineDodgeGame.cpp(94,81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\C++ projects\DodgeGame\3LineDodgeGame\3LineDodgeGame\3LineDodgeGame.cpp(94,58): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\C++ projects\DodgeGame\3LineDodgeGame\3LineDodgeGame\3LineDodgeGame.cpp(94,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\C++ projects\DodgeGame\3LineDodgeGame\3LineDodgeGame\3LineDodgeGame.cpp(94,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   3LineDodgeGame.vcxproj -> E:\C++ projects\DodgeGame\3LineDodgeGame\x64\Debug\3LineDodgeGame.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.

@@ -57,8 +57,7 @@ void Player::Move_Player()
     else if (IsKeyPressed(KEY_DOWN))
     {
         // Check if player is not already on the bottom line
-        float bottomLimit = play_area.y + play_area.height - line_spacing;
-        if (player_object.Get_Y() < bottomLimit) {
+        if (player_object.Get_Y() < play_area.y + play_area.height - line_spacing) {
             player_object.Set_Y(player_object.Get_Y() + line_spacing); // Move Down (add line spacing)
         }
     }
@@ -82,17 +81,17 @@ void Player::Check_PlayerCollisions()
 }
 
 
-GameObject& Player::Get_PlayerObject() {
-    return player_object;
-}
-
 void Player::Check_EnemyCollisions(GameObject bullet_object)
 {
-    if (CheckCollisionCircles({ player_object.Get_X(), player_object.Get_Y() }, player_object.Get_R(), { bullet_object.Get_X(), bullet_object.Get_Y() }, bullet_object.Get_R()))
+    if (CheckCollisionCircles({player_object.Get_X(), player_object.Get_Y() }, player_object.Get_R(), { bullet_object.Get_X(), bullet_object.Get_Y() }, bullet_object.Get_R()))
     {
         hp--;
         std::cout << hp << std::endl;
     }
+}
+
+GameObject& Player::Get_PlayerObject() {
+    return player_object;
 }
 
 int Player::Get_HP()
